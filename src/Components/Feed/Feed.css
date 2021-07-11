@@ -3,7 +3,6 @@
   height: 800px;
   border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
   margin-bottom: 30px;
-  padding: 3px 0px;
 }
 
 .Feed--UserInfo {
@@ -11,6 +10,6 @@
   align-items: center;
 }
 
-.Feed--UserInfo span {
-  margin-left: 7px;
+.Feed img {
+  width: 100%;
 }

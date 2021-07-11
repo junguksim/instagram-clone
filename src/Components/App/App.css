@@ -1,6 +1,22 @@
 .App {
+  display: flex;
+  justify-content: center;
+}
+
+.MainContainer {
   width: 60%;
-  margin: 0 auto;
-  margin-top: 84px;
-  position: relative;
+  margin-top: 54px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.LeftContainer {
+  width: 50%;
+}
+
+.RightContainer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
 }
