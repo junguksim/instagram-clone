@@ -1,0 +1,12 @@
+.StoryList {
+  width: 500px;
+  height: 90px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.StoryList::-webkit-scrollbar {
+  display: none;
+}

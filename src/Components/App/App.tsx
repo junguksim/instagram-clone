@@ -1,6 +1,6 @@
 import React from "react";
-import StoryList from "../../Story/StoryList";
-import FeedList from "../Feed/FeedList";
+import FeedList from "../../Containers/Feed/FeedList";
+import StoryList from "../../Containers/StoryList/StoryList";
 import NavBar from "../NavBar/NavBar";
 import UserRecommendMain from "../UserRecommend/UserRecommendMain";
 import "./App.css";

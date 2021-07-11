@@ -2,12 +2,16 @@ import React from "react";
 import Feed from "./Feed";
 import "./FeedList.css";
 
-const FeedList = () => {
+type FeedListProps = {
+  feedList: Feed[];
+};
+
+const FeedList = ({ feedList }: FeedListProps) => {
   return (
     <div className="FeedList">
-      <Feed />
-      <Feed />
-      <Feed />
+      {feedList.map((feed: Feed) => {
+        return <Feed feed={feed} />;
+      })}
     </div>
   );
 };
