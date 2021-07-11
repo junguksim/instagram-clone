@@ -1,0 +1,5 @@
+.StoryList {
+  width: 500px;
+  height: 90px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
