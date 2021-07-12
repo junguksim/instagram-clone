@@ -10,7 +10,7 @@ const FeedList = ({ feedList }: FeedListProps) => {
   return (
     <div className="FeedList">
       {feedList.map((feed: Feed) => {
-        return <Feed feed={feed} />;
+        return <Feed feed={feed} key={feed.id} />;
       })}
     </div>
   );
