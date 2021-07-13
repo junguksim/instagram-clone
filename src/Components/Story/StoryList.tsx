@@ -1,16 +1,15 @@
 import React from "react";
-import SimpleUser from "../User/SimpleUser";
+import Story from "./Story";
 import "./StoryList.css";
 
 type StoryListProps = {
-  storyList: StoryList;
+  storyList: Story[];
 };
-const StoryList = ({ storyList: { friendList } }: StoryListProps) => {
-  console.log(friendList);
+const StoryList = ({ storyList }: StoryListProps) => {
   return (
     <div className="StoryList">
-      {friendList.map((friend: UserSimpleInfo) => {
-        return <SimpleUser userInfo={friend} key={friend.id} />;
+      {storyList.map((storyInfo: Story) => {
+        return <Story storyInfo={storyInfo} key={storyInfo.id} />;
       })}
     </div>
   );

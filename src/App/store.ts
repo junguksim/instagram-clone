@@ -7,17 +7,13 @@ declare global {
   }
 
   type DefaultStore = {
-    storyList: StoryList;
+    storyList: Story[];
     feedList: Feed[];
   };
   type UserSimpleInfo = {
     id: number;
     username: string;
     avatar: string;
-  };
-
-  type StoryList = {
-    friendList: UserSimpleInfo[];
   };
 
   type Feed = {
@@ -29,6 +25,13 @@ declare global {
     likes: number;
     createdAt: string;
   };
+
+  type Story = {
+    id: number;
+    username: string;
+    avatar: string;
+    story: string;
+  };
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -36,60 +39,68 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const reducer: Reducer<unknown, Action<any>> = function (state, action) {
   if (state === undefined) {
     return {
-      storyList: {
-        friendList: [
-          {
-            id: 1,
-            username: "kduding0",
-            avatar: "https://robohash.org/dolorumeaasperiores.png?size=50x50&set=set1",
-          },
-          {
-            id: 2,
-            username: "egocke1",
-            avatar: "https://robohash.org/facilisiustoesse.png?size=50x50&set=set1",
-          },
-          {
-            id: 3,
-            username: "xmaruszewski2",
-            avatar: "https://robohash.org/veritatisetid.png?size=50x50&set=set1",
-          },
-          {
-            id: 4,
-            username: "zhaversham3",
-            avatar: "https://robohash.org/laboreexeaque.png?size=50x50&set=set1",
-          },
-          {
-            id: 5,
-            username: "dblore4",
-            avatar: "https://robohash.org/illumvitaeminima.png?size=50x50&set=set1",
-          },
-          {
-            id: 6,
-            username: "kbradbrook5",
-            avatar: "https://robohash.org/autemquiacorporis.png?size=50x50&set=set1",
-          },
-          {
-            id: 7,
-            username: "kcawtheray6",
-            avatar: "https://robohash.org/sequiutid.png?size=50x50&set=set1",
-          },
-          {
-            id: 8,
-            username: "olaminman7",
-            avatar: "https://robohash.org/placeatdoloresratione.png?size=50x50&set=set1",
-          },
-          {
-            id: 9,
-            username: "sskivington8",
-            avatar: "https://robohash.org/inventoreexcepturirerum.png?size=50x50&set=set1",
-          },
-          {
-            id: 10,
-            username: "fself9",
-            avatar: "https://robohash.org/omnisquaeratsed.png?size=50x50&set=set1",
-          },
-        ],
-      },
+      storyList: [
+        {
+          id: 1,
+          username: "mbaskwell0",
+          avatar: "https://robohash.org/totamquiinventore.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/dddddd/000000",
+        },
+        {
+          id: 2,
+          username: "pkincla1",
+          avatar: "https://robohash.org/estquosimilique.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/cc0000/ffffff",
+        },
+        {
+          id: 3,
+          username: "haveline2",
+          avatar: "https://robohash.org/sitdoloremquequi.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/ff4444/ffffff",
+        },
+        {
+          id: 4,
+          username: "hemmitt3",
+          avatar: "https://robohash.org/veniamrerumnemo.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/dddddd/000000",
+        },
+        {
+          id: 5,
+          username: "edietzler4",
+          avatar: "https://robohash.org/quibusdamquodet.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/dddddd/000000",
+        },
+        {
+          id: 6,
+          username: "lyggo5",
+          avatar: "https://robohash.org/suntiureconsequuntur.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/5fa2dd/ffffff",
+        },
+        {
+          id: 7,
+          username: "cwheaton6",
+          avatar: "https://robohash.org/culpadoloremolestias.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/5fa2dd/ffffff",
+        },
+        {
+          id: 8,
+          username: "scayette7",
+          avatar: "https://robohash.org/dolorumquamdolore.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/ff4444/ffffff",
+        },
+        {
+          id: 9,
+          username: "zniese8",
+          avatar: "https://robohash.org/eaatquedolorem.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/dddddd/000000",
+        },
+        {
+          id: 10,
+          username: "rdoddrell9",
+          avatar: "https://robohash.org/odiodoloreseum.png?size=50x50&set=set1",
+          story: "http://dummyimage.com/300x500.png/cc0000/ffffff",
+        },
+      ],
       feedList: [
         {
           id: 1,

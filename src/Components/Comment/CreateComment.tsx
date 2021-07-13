@@ -1,4 +1,3 @@
-import { Emoji } from "emoji-mart";
 import React, { useState } from "react";
 import "./CreateComment.css";
 import EmojiPicker from "./EmojiPicker";
